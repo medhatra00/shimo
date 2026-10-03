@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>For You ❤️</title>
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:#09080d;color:#fff;font-family:Tahoma,Arial,sans-serif}
+body{overflow-x:hidden;background:
+radial-gradient(circle at 50% 20%,rgba(255,70,130,.12),transparent 34%),
+radial-gradient(circle at 20% 80%,rgba(255,20,90,.06),transparent 30%),#09080d}
+.bg-heart{position:fixed;inset:0;pointer-events:none;opacity:.16;background-image:radial-gradient(circle,rgba(255,110,160,.18) 1px,transparent 1px);background-size:30px 30px}
+.wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
+.card{width:min(760px,100%);text-align:center}
+h1{font-size:clamp(28px,6vw,54px);margin:0 0 8px;font-weight:700;letter-spacing:.5px}
+.sub{color:#bdb8c0;margin-bottom:30px;font-size:15px}
+.envelope-area{perspective:1000px;min-height:310px;display:flex;align-items:center;justify-content:center}
+.envelope{width:min(430px,88vw);height:245px;position:relative;cursor:pointer;filter:drop-shadow(0 20px 45px rgba(255,0,90,.12));transition:.5s}
+.env-body{position:absolute;inset:35px 0 0;background:linear-gradient(145deg,#25151f,#130f15);border:1px solid rgba(255,255,255,.09);border-radius:10px;box-shadow:inset 0 0 40px rgba(255,50,120,.06)}
+.flap{position:absolute;z-index:4;left:0;right:0;top:35px;margin:auto;width:0;height:0;border-left:215px solid transparent;border-right:215px solid transparent;border-top:125px solid #3a1b2a;transform-origin:top;transition:1s cubic-bezier(.2,.8,.2,1);filter:drop-shadow(0 3px 2px rgba(0,0,0,.25))}
+.heart{position:absolute;z-index:6;left:50%;top:113px;transform:translate(-50%,-50%);font-size:43px;transition:.5s}
+.seal{position:absolute;z-index:7;left:50%;top:113px;transform:translate(-50%,-50%);font-size:12px;color:#fff;opacity:.85}
+.envelope.open .flap{transform:rotateX(175deg);z-index:1}
+.envelope.open .heart,.envelope.open .seal{opacity:0}
+.envelope.open{transform:translateY(35px)}
+.letter{display:none;margin-top:10px;text-align:right;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.09);border-radius:18px;padding:24px;box-shadow:0 20px 70px rgba(0,0,0,.35);backdrop-filter:blur(12px);animation:rise .9s ease both}
+.letter.show{display:block}
+.message{line-height:2.05;font-size:16px;color:#eee;word-break:break-word}
+.message br{display:block;content:"";margin-top:9px}
+.lock{margin:20px auto 0;display:flex;gap:9px;justify-content:center;align-items:center;flex-wrap:wrap}
+input{width:min(260px,70vw);padding:13px 15px;border-radius:12px;border:1px solid rgba(255,255,255,.14);background:#111016;color:#fff;outline:none;text-align:center}
+button{padding:13px 22px;border:0;border-radius:12px;background:linear-gradient(135deg,#e83b78,#9f2854);color:#fff;font-weight:bold;cursor:pointer;box-shadow:0 10px 25px rgba(232,59,120,.18)}
+.error{height:22px;color:#ff8caf;font-size:13px;margin-top:8px}
+.hint{margin-top:18px;color:#8e8991;font-size:12px}
+@keyframes rise{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:none}}
+@media(max-width:520px){.envelope{height:220px}.flap{border-left-width:44vw;border-right-width:44vw;border-top-width:110px}.env-body{top:30px}.heart{top:105px}.seal{top:105px}.message{font-size:15px;line-height:2}.letter{padding:18px}}
+</style>
+</head>
+<body>
+<div class="bg-heart"></div>
+<main class="wrap">
+<section class="card">
+<h1>رسالة ليكي ❤️</h1>
+<div class="sub">في حاجة جوا الظرف مستنياكي...</div>
+
+<div id="lockBox">
+<div class="envelope-area">
+<div class="envelope" id="envelope">
+<div class="env-body"></div>
+<div class="flap"></div>
+<div class="heart">♥</div><div class="seal">MY WIFE</div>
+</div>
+</div>
+<div class="lock">
+<input id="password" type="text" placeholder="اكتبي الباسورد" autocomplete="off">
+<button id="openBtn">افتحي الظرف ❤️</button>
+</div>
+<div class="error" id="error"></div>
+<div class="hint">الباسورد هو كلمة السر الخاصة بالرسالة</div>
+</div>
+
+<article class="letter" id="letter">
+<div class="message">اسمعي انا جبت اخرى خلاص منك <br>اه فعلا جبت اخرى مش عارف اوصفلك ازاي بحبك هقولك ايه يعني اجيب اخرى منك في ايه😂🔪 جبت اخرى منك في اني مش عارف اوصفلك ولا احسسك بمقدار الحب ال عندي ليكي،، بصي عارف ان اوقات الظروف والوقت والضغوطات ال بتمري فيها اوقات بتخليكي مش قادرة تتكلمي او مفكيش حيل تتكلمي حتى انا عارف دا كله كويس انا فاهم دا وحاسس بيكي يعلم ربنا انا قد ايه بتقطع وانا بشوفك كدا او لمحت فيكي نقطه حزن وحده انا بالي بيفضل مشغول في حاجه! اقدر ازاي اطلعك من دا كله  والله لو عليا انا عاوز اجي اخطفك ونهرب انا وانتي من كل دا 🤣🤣🤣 عارف قد ايه انتي بتتعبي وبتسوي على الاقل بتعملي دا كله عشان اولادك انا عارف انك معندكيش اغلى من اولادك على قلبك دا شي اكيد انتي بتعملي ال عليكي وال مش عليكي والله حتى لو دايما مش شايف دا لكن انا عارف انتي قد ايه عمالة تتعبي على الاقل،، كمان دا مش موضوعنا كل دا فحته وعايزك تبصي لنفسك بردك متخليش التعب او الحزن اوقات يحطك فدوامه انك لازم تتحملي كل حاجه لوحدك اي نعم انتي فعلا شايلة كل حاجه لوحدك على الاقل حاليا وقبلها حتى بس يعني فكري فنفسك بردك وفي صحتك بجانب دا كله أي نعم انتي مزه وعارف بس يعني اوعى عقبال ما اجيلك الاقيكي قلبتي صباع مكرونه🤣🤣بهزر طبعا🤭 انتي يعني حلوه وجميلة في كل حالاتك حتى في اتعب اوقاتك بتفضلي حلوه مش موضعنا بردك  انا معرفش ايه حاصل معاكي ولا ايه مزعلك ان كان في حاجه حصلت كلامه بعيده عن اولادك ونفسك خلاص مش مهمه هل دا ضغط شغل والمستر العلق اتمنيك تاني؟ معرفش بس لو هو بردك كسمو دا هو فاجر اصلا عايز حد ين.... فعلا ،، هل هى حاجه غير كدا معرفش بردك المهم ان دا حصل بس زي ما قولتلك طلامه بعيده عنك وعن اولادك خلاص مش بقلل من مقدار حزنك بس بخفف عليكي ان مهمها كان حصل طلامه بعيده خلاص ومتحبسيش نفسك جوا الزعل يعني انا مثلا الحاجه ال بتعمل فيا كدا وانغلق على نفسي انتي بس غريبه انه يطلع كلام مني زي كدا بس يعني انتي اغلى حد في حياتي فبطبيعي يعني انغلق واحط قفل بمفتاح لحد ما ترجعي تفتحيه 🤭😂  كل دا بردو اهو مش موضوعنا نرجع لموضوعنا قوليلي ايه الحلاوه دي والجميل هفيفضل زعلان كدا؟ لا الحلوه بتاعتي مينفعلهاش غير الضحكة الحلوه ال بتضحكها وبحبها هتقوليلي شفت فين ضحكتك يعني؟ شكلك مش فاكرة ساعت كنا في عنين بعض 🙈 تضحكي وتضحكيني وتستخبي🤣🤣 ياه ضحكتيني اوي ،، ضحكتك اجمل ضحكة فالدنيا عندي ❤ اضحكي انتي متلقش عليكي غير البسمة والفرحة لانك تستاهليها مش عارف حماتي سايبه لوح التلج بعيد عنها ليه كل دا قوليلها لو سبتيني كتير كدا حد هييجي يخطفني ومشهيرجعني تاني وانتي حره🤣 عودتك على ايه انا !! على فكرة انتي اه اكبر مني عمرا بس بس انا اكبر منك بقى فكل حاجه وشايفك  صغننه بتعامل معاكي زي بنتي ال مخلتفتهاش لسه منك🙈🤣 عزدتك على ايه انا؟؟ مهمها كان الظرف ال انتي فيه مهمها كان الوضع ال اتحطيتي فيه انا معاكي تعبتي محتاجه ترتاحي انا معاكي دايما ارتاحي معاية وعليا اسندي عليا وقوليلي دايما لو حصل حاجه معاكي على فكرة ان تقولي مش عاوزه تتكلمي دي ليا غلط بصي انا يا ريت تكوني معتبراني الشخص ال برتجعيلة وبتحكيلة وبتشكيلي وتقوليلي كل حاجه فقلبك وانتي عارفه اني هفهمك وهحضنك واحس بيكي وتكوني عارفة مليون في المية اني مش هفهمك غلط ولا هتتغير نظرتي او تفكيري تجاهك لان انتي بالنسبااي توأم روح ال حسيت ان دا البنت الوحيده ال هتملي عيني وهيعيش معاها اجمل ايامي واعيشها اجمل ايامها انا دايما مبقولش ايامي الاجمل جات اه ايامي مفيش اجمل منها معاكي والله بس متاكد ان لسه الاجمل واحنا مع بعض❤ فمتزعليش او اقولك لو بردك زعلتي المهم تجيلي وانا اراضيكي بردك  تزعلك الدنيا وانا اراضيكي مش عارف الحنيه دي مش بتطلع غير ليكي والله خاطفة قلبي انتي  🤣 وال يشوفني يقول دا معندوش قلب😂  المهم انا كترت اوي فالكلام عارف كان نفسي اقولك  كل دا صوت وانتي قدامي بس انتي طبعا المجنونه ال بحبها مش عاوزه تكلمني🔪🔪🔪 حسابي معاكي لما اراضيكي من كل دا🔪 اهم حاجه انا معاكي محتاجاني انا معاكي مش محتاجاني انا معاكي بردو انا اي حاجه فيها انتي انا معاكي فيها مش لوحدك عندك انا مثلا معرفش معتبره وجودي جنبك حاجه كبيرة او لا بقى بس لو عليا انتي حاجه كبيرة اوي بالنسبالي اكبر من طيبه قلبك كدا 🤭🤣 انتي حياتي وكل حاجه متفضليش زعلانه ❤❤ ارجعيلي دايما انا معاكي،، لو جيتي قولتيلي انا كاتبلك ايه صدقيني مش عارف انا بكتب الكلام ال طالع من قلبي ليكي وخلاص لاني بتعامل معاكي بقلبي مش عقلي أصلا منها لله السبب بقى 🔪🔪واخيرا الاعتراف الاخير اني اني   لا خلاص مش هقول عشان انتي مقموسه بقى 😒 <br>لا يا عم بهزر بعترف اني بحبك اوي اكتر من اي حاجه في حياتي ❤❤❤</div>
+</article>
+
+<audio id="music" src="tiktok_slideshow.mp4" loop preload="auto"></audio>
+</section>
+</main>
+
+<script>
+const password="my wife";
+const input=document.getElementById("password");
+const btn=document.getElementById("openBtn");
+const envelope=document.getElementById("envelope");
+const letter=document.getElementById("letter");
+const error=document.getElementById("error");
+const music=document.getElementById("music");
+
+function openLetter(){
+  if(input.value.trim().toLowerCase()!==password){
+    error.textContent="الباسورد مش صحيح ❤️";
+    return;
+  }
+  error.textContent="";
+  envelope.classList.add("open");
+  setTimeout(()=>letter.classList.add("show"),650);
+  music.currentTime=0;
+  music.play().catch(()=>{
+    document.addEventListener("click",()=>music.play().catch(()=>{}),{once:true});
+  });
+  document.getElementById("lockBox").style.display="none";
+}
+btn.addEventListener("click",openLetter);
+input.addEventListener("keydown",e=>{if(e.key==="Enter")openLetter()});
+</script>
+</body>
+</html>
